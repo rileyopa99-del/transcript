@@ -5,12 +5,12 @@ import { formatDate } from '../../lib/format'
 export default function OverviewTab({ state }) {
   const {
     vision,
-    health,
     current_priorities: priorities = [],
     architecture_decisions: decisions = [],
     open_questions: questions = [],
     blockers = [],
   } = state
+  const health = state.project?.health
 
   const recentDecisions = [...decisions]
     .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))
@@ -66,8 +66,8 @@ export default function OverviewTab({ state }) {
                     </span>
                   )}
                 </div>
-                {d.rationale && (
-                  <p className="mt-1 text-sm text-slate-400">{d.rationale}</p>
+                {d.reason && (
+                  <p className="mt-1 text-sm text-slate-400">{d.reason}</p>
                 )}
               </li>
             ))}

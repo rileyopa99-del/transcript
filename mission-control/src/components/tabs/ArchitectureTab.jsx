@@ -52,8 +52,8 @@ export default function ArchitectureTab({ state }) {
                   <div className="font-mono text-xs text-slate-500">{formatDate(d.date)}</div>
                 )}
                 <div className="mt-0.5 text-sm font-medium text-slate-200">{d.decision}</div>
-                {d.rationale && (
-                  <div className="mt-1 text-sm text-slate-400">{d.rationale}</div>
+                {d.reason && (
+                  <div className="mt-1 text-sm text-slate-400">{d.reason}</div>
                 )}
               </li>
             ))}

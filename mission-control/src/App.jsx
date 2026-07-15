@@ -29,18 +29,21 @@ function App() {
     )
   }
 
+  const project = state.project || {}
+
   return (
     <div className="min-h-screen bg-base text-slate-100">
       <Sidebar
-        projectName={state.project_name}
-        health={state.health}
-        phase={state.current_phase}
+        projectName={project.name}
+        tagline={project.tagline}
+        health={project.health}
+        phase={project.phase}
         activeTab={activeTab}
         onSelectTab={setActiveTab}
       />
 
       <div className="ml-60 flex min-h-screen flex-col">
-        <TopBar activeTab={activeTab} phase={state.current_phase} lastUpdated={state.last_updated} />
+        <TopBar activeTab={activeTab} phase={project.phase} lastUpdated={project.last_updated} />
 
         <main className="flex-1 px-6 py-6">
           {activeTab === 'overview' && <OverviewTab state={state} />}

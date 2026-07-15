@@ -1,7 +1,7 @@
 import HealthBadge from './HealthBadge'
 import { TABS } from '../lib/tabs'
 
-export default function Sidebar({ projectName, health, phase, activeTab, onSelectTab }) {
+export default function Sidebar({ projectName, tagline, health, phase, activeTab, onSelectTab }) {
   return (
     <aside className="fixed inset-y-0 left-0 flex w-60 flex-col border-r border-white/10 bg-surface">
       <div className="border-b border-white/10 px-4 py-5">
@@ -11,6 +11,7 @@ export default function Sidebar({ projectName, health, phase, activeTab, onSelec
         <h1 className="mt-1 truncate text-lg font-semibold text-white" title={projectName}>
           {projectName || 'Untitled Project'}
         </h1>
+        {tagline && <p className="mt-1 text-xs leading-snug text-slate-400">{tagline}</p>}
         <div className="mt-3 flex flex-col items-start gap-2">
           <HealthBadge health={health} />
           {phase && (
