@@ -31,25 +31,92 @@
     "Event scraping strategy — which APIs to prioritize first",
     "Monetization model if any — keep fully free or freemium for organizers"
   ],
-  "tasks": {
-    "backlog": [
-      "Build event scraping agent for Eventbrite",
-      "Build Meetup data integration",
-      "AI authenticity verification queue",
-      "User interest profile personalization",
-      "Calendar sync integration"
-    ],
-    "in_progress": [
-      "Mission Control dashboard — Week 1",
-      "Final Lovable UI iteration"
-    ],
-    "review": [],
-    "done": [
-      "Initial Lovable UI prototype",
-      "App concept and feature definition",
-      "Tagline and positioning"
-    ]
-  },
+  "tasks": [
+    {
+      "id": "forma-rankin-followup",
+      "title": "Follow up with Dr. Rankin on clinical collaboration",
+      "status": "in_progress",
+      "project": "Forma",
+      "priority": "high",
+      "due": null,
+      "owner": "human",
+      "agent_actionable": false,
+      "notes": "Text sent, awaiting response",
+      "depends_on": []
+    },
+    {
+      "id": "forma-orcid",
+      "title": "Register for ORCID",
+      "status": "todo",
+      "project": "Forma",
+      "priority": "medium",
+      "due": null,
+      "owner": "human",
+      "agent_actionable": true,
+      "notes": "Needed for SBIR application",
+      "depends_on": []
+    },
+    {
+      "id": "forma-kstc-deck",
+      "title": "Build 5-slide KSTC micro-grant deck",
+      "status": "todo",
+      "project": "Forma",
+      "priority": "medium",
+      "due": null,
+      "owner": "human",
+      "agent_actionable": true,
+      "notes": "$5K micro-grant, low lift",
+      "depends_on": []
+    },
+    {
+      "id": "forma-aims-to-emilie",
+      "title": "Send SBIR Specific Aims to Emilie's team",
+      "status": "todo",
+      "project": "Forma",
+      "priority": "high",
+      "due": "2026-09-05",
+      "owner": "human",
+      "agent_actionable": false,
+      "notes": "Aims red-teamed to 9.3/10",
+      "depends_on": []
+    },
+    {
+      "id": "mc-tasks-tab",
+      "title": "Build Tasks tab in Mission Control",
+      "status": "in_progress",
+      "project": "Mission Control",
+      "priority": "high",
+      "due": null,
+      "owner": "agent",
+      "agent_actionable": true,
+      "notes": "Read-only, Week 1 scope",
+      "depends_on": []
+    },
+    {
+      "id": "out-claude-code-migration",
+      "title": "Migrate Out app agent layer to Claude Code",
+      "status": "todo",
+      "project": "Out",
+      "priority": "medium",
+      "due": null,
+      "owner": "agent",
+      "agent_actionable": true,
+      "notes": "UI in Lovable is near-complete; backend/scraping logic moving here",
+      "depends_on": []
+    },
+    {
+      "id": "consultancy-first-client",
+      "title": "Line up first free AI consultancy client",
+      "status": "todo",
+      "project": "AI Consultancy",
+      "priority": "low",
+      "due": null,
+      "owner": "human",
+      "agent_actionable": false,
+      "notes": "First of 3 free clients from network",
+      "depends_on": []
+    }
+  ],
   "outreach": {
     "grants": [],
     "contacts": [],
