@@ -1,0 +1,77 @@
+{
+  "project_name": "Mission Control",
+  "last_updated": "2026-07-15T14:32:00Z",
+  "current_phase": "Week 1 - MVP Build",
+  "health": "on_track",
+  "vision": "A unified dashboard that gives a solo founder command-center visibility over every AI-assisted workstream of the startup — tasks, architecture, agents, and outreach — in one dense, no-nonsense interface.",
+  "current_priorities": [
+    "Ship the six-tab Mission Control dashboard reading from project_state.json",
+    "Wire up Vercel deployment for the mission-control app",
+    "Validate the dashboard renders correctly with empty and populated data"
+  ],
+  "architecture_decisions": [
+    {
+      "date": "2026-07-15",
+      "decision": "Use Vite + React instead of Create React App",
+      "rationale": "CRA is unmaintained; Vite gives faster dev server startup and build times for a single-page dashboard."
+    },
+    {
+      "date": "2026-07-15",
+      "decision": "Read project_state.json via fetch from /public instead of static import",
+      "rationale": "Keeps the dashboard read-only and lets the JSON file be edited without a rebuild during Week 1."
+    },
+    {
+      "date": "2026-07-15",
+      "decision": "No backend for Week 1",
+      "rationale": "All state lives in a single JSON file; a backend can be introduced later once write functionality is needed."
+    }
+  ],
+  "open_questions": [
+    "Should agent chat persist conversation history once a backend exists?",
+    "What should trigger a health status change from On Track to At Risk?",
+    "Do outreach tables need sorting/filtering before Week 2?"
+  ],
+  "blockers": [],
+  "tasks": {
+    "backlog": [
+      "Add write-back support for project_state.json",
+      "Wire Agent Chat tab to a real model backend",
+      "Add filtering/sorting to Outreach tables",
+      "Add task drag-and-drop on the Tasks kanban"
+    ],
+    "in_progress": [
+      "Build six-tab dashboard UI (Overview, Tasks, Architecture, Agent Chat, Outreach, Ideas)",
+      "Set up Tailwind dark theme tokens"
+    ],
+    "review": [
+      "Confirm sidebar health indicator matches health field values"
+    ],
+    "done": [
+      "Scaffold Vite + React project",
+      "Define project_state.json schema",
+      "Choose color palette and typography"
+    ]
+  },
+  "tech_stack": {
+    "frontend": ["React 19", "Vite"],
+    "styling": ["Tailwind CSS v4"],
+    "deployment": ["Vercel"],
+    "data": ["project_state.json (static file, no database yet)"]
+  },
+  "outreach": {
+    "website_status": "Not live",
+    "grants": [],
+    "contacts": [],
+    "pitch_competitions": []
+  },
+  "ideas_log": [
+    {
+      "idea": "Add a CLI companion that syncs project_state.json from git commit messages",
+      "timestamp": "2026-07-14T09:10:00Z"
+    },
+    {
+      "idea": "Let each agent role in Agent Chat write its own scoped section back to project_state.json",
+      "timestamp": "2026-07-15T08:45:00Z"
+    }
+  ]
+}
